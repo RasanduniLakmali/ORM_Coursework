@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="studentPage" prefHeight="1038.0" prefWidth="1590.0" stylesheets="@../styles/student.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
+   <children>
+      <Text fx:id="studentHeading" layoutX="631.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGE STUDENTS">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="0.42380952380952386" startX="0.5285714285714286" startY="0.48095238095238096">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7968810796737671" green="0.5029239654541016" blue="0.8421052694320679" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.41960784792900085" green="0.2549019753932953" blue="0.6196078658103943" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Pane fx:id="studentForm" layoutX="47.0" layoutY="186.0" prefHeight="690.0" prefWidth="473.0">
+         <children>
+            <TextField fx:id="txtStudentId" layoutX="74.0" layoutY="73.0" onKeyReleased="#txtStudentIdOnKeyReleased" prefHeight="30.0" prefWidth="306.0" promptText="Enter student id" />
+            <Text layoutX="74.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="saveBtn" layoutX="25.0" layoutY="615.0" mnemonicParsing="false" onAction="#saveBtnOnAction" prefHeight="35.0" prefWidth="96.0" style="-fx-background-radius: 12;" text="Save" />
+            <Button fx:id="updateBtn" layoutX="131.0" layoutY="615.0" mnemonicParsing="false" onAction="#updateBtnOnAction" prefHeight="35.0" prefWidth="96.0" style="-fx-background-radius: 12;" text="Update" />
+            <Button fx:id="deleteBtn" layoutX="240.0" layoutY="615.0" mnemonicParsing="false" onAction="#deleteBtnOnAction" prefHeight="35.0" prefWidth="96.0" style="-fx-background-radius: 12;" text="Delete" />
+            <Button fx:id="clearBtn" layoutX="353.0" layoutY="615.0" mnemonicParsing="false" onAction="#clearBtnOnAction" prefHeight="35.0" prefWidth="96.0" style="-fx-background-radius: 12;" text="Clear" />
+            <TextField fx:id="txtStudentName" layoutX="70.0" layoutY="262.0" onAction="#txtStudentNameOnAction" onKeyReleased="#txtNameOnKeyReleased" prefHeight="30.0" prefWidth="306.0" promptText="Enter name" />
+            <Text layoutX="76.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtAddress" layoutX="68.0" layoutY="350.0" prefHeight="30.0" prefWidth="306.0" promptText="Enter address" />
+            <Text layoutX="68.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtEmail" layoutX="68.0" layoutY="443.0" onAction="#txtEmailOnAction" onKeyReleased="#txtEmailOnKeyReleased" prefHeight="30.0" prefWidth="306.0" promptText="Enter email" />
+            <Text layoutX="68.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtContact" layoutX="68.0" layoutY="537.0" onKeyReleased="#txtContactOnKeyReleased" prefHeight="30.0" prefWidth="306.0" promptText="Enter contact number" />
+            <Text layoutX="69.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="71.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="cmbUser" layoutX="70.0" layoutY="161.0" onAction="#cmbUserOnAction" onKeyReleased="#txtUserIdOnKeyReleased" opacity="0.66" prefHeight="37.0" prefWidth="306.0" promptText="User" style="-fx-background-radius: 10;" visibleRowCount="2" />
+         </children>
+      </Pane>
+      <TableView fx:id="studentsTbl" layoutX="546.0" layoutY="255.0" prefHeight="593.0" prefWidth="998.0">
+        <columns>
+          <TableColumn fx:id="colStudentId" prefWidth="109.0" text="Student ID" />
+          <TableColumn fx:id="colUserID" prefWidth="127.0" text="User ID" />
+            <TableColumn fx:id="colName" prefWidth="197.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="180.0" text="Address" />
+            <TableColumn fx:id="colEmail" prefWidth="196.0" text="Email" />
+            <TableColumn fx:id="colContact" prefWidth="188.0" text="Contact" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearchId" layoutX="1233.0" layoutY="186.0" prefHeight="26.0" prefWidth="162.0" />
+      <Button fx:id="searchBtn" layoutX="1419.0" layoutY="184.0" mnemonicParsing="false" onAction="#searchBtnOnAction" prefHeight="30.0" prefWidth="96.0" style="-fx-background-radius: 12;" text="Search" />
+      <Button fx:id="viewBtn" layoutX="1326.0" layoutY="36.0" mnemonicParsing="false" onAction="#studentViewBtnOnAction" prefHeight="35.0" prefWidth="200.0" style="-fx-background-radius: 12;" text="View Registered Students" />
+   </children>
+</AnchorPane>

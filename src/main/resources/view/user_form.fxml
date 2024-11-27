@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="userPage" prefHeight="1038.0" prefWidth="1590.0" stylesheets="@../styles/user.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserFormController">
+   <children>
+     
+      <Text fx:id="userHeading" layoutX="654.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGE USERS">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="0.42380952380952386" startX="0.5285714285714286" startY="0.48095238095238096">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7968810796737671" green="0.5029239654541016" blue="0.8421052694320679" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.41960784792900085" green="0.2549019753932953" blue="0.6196078658103943" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Pane fx:id="userForm" layoutX="46.0" layoutY="151.0" prefHeight="545.0" prefWidth="473.0" stylesheets="@../styles/user.css">
+         <children>
+            <Button fx:id="updateBtn" layoutX="28.0" layoutY="492.0" mnemonicParsing="false" onAction="#updateBtnOnAction" prefHeight="30.0" prefWidth="96.0" style="-fx-background-radius: 12;" text="Update" />
+            <Button fx:id="deleteBtn" layoutX="172.0" layoutY="492.0" mnemonicParsing="false" onAction="#deleteBtnOnAction" prefHeight="30.0" prefWidth="96.0" style="-fx-background-radius: 12;" text="Delete" />
+            <Button fx:id="clearBtn" layoutX="328.0" layoutY="492.0" mnemonicParsing="false" onAction="#clearBtnOnAction" prefHeight="30.0" prefWidth="96.0" style="-fx-background-radius: 12;" text="Clear" />
+            <TextField fx:id="txtUserName" layoutX="76.0" layoutY="177.0" onAction="#txtNameOnAction" onKeyReleased="#txtUsernameOnKeyReleased" prefHeight="30.0" prefWidth="307.0" promptText="Enter name" />
+            <Text layoutX="75.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtEmail" layoutX="76.0" layoutY="346.0" onAction="#txtEmailOnAction" onKeyReleased="#txtEmailOnKeyReleased" prefHeight="30.0" prefWidth="307.0" promptText="Enter email" />
+            <Text layoutX="76.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="76.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="txtPassword" layoutX="76.0" layoutY="266.0" onAction="#txtPasswordOnAction" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="30.0" prefWidth="307.0" promptText="Enter password" />
+            <Text layoutX="73.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtContact" layoutX="76.0" layoutY="430.0" onKeyReleased="#txtContactOnKeyReleased" prefHeight="30.0" prefWidth="307.0" promptText="Enter contact" />
+            <ImageView fitHeight="17.0" fitWidth="21.0" layoutX="347.0" layoutY="273.0" onMouseClicked="#passwordVisible">
+               <image>
+                  <Image url="@../assets/images/pw_eyeIcon.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="75.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtUserId" layoutX="76.0" layoutY="89.0" prefHeight="30.0" prefWidth="307.0" promptText="Enter User Id" />
+         </children>
+      </Pane>
+      <TableView fx:id="userTbl" layoutX="557.0" layoutY="151.0" prefHeight="731.0" prefWidth="1004.0">
+        <columns>
+          <TableColumn fx:id="colUserId" prefWidth="184.0" text="User ID" />
+          <TableColumn fx:id="colName" prefWidth="190.0" text="Name" />
+            <TableColumn fx:id="colPassword" prefWidth="208.0" text="Password" />
+            <TableColumn fx:id="colEmail" prefWidth="233.0" text="Email" />
+            <TableColumn fx:id="colContact" prefWidth="188.0" text="Contact" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="256.0" fitWidth="307.0" layoutX="115.0" layoutY="756.0">
+         <image>
+            <Image url="@../assets/images/user_img.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import com.gluonhq.charm.glisten.control.TextField?>-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="signForm" prefHeight="763.0" prefWidth="1061.0" stylesheets="@../styles/signUp.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SignUpFormController">
+   <children>
+      <Pane fx:id="signUpDetails" layoutX="41.0" layoutY="42.0" prefHeight="680.0" prefWidth="438.0">
+         <children>
+            <TextField fx:id="txtUsername" layoutX="67.0" layoutY="267.0" onAction="#txtUsernameOnAction" onKeyReleased="#txtUsernameOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter username" style="-fx-background-radius: 10;" />
+            <ComboBox fx:id="cmbUser" layoutX="67.0" layoutY="134.0" opacity="0.66" prefHeight="37.0" prefWidth="304.0" promptText="User" style="-fx-background-radius: 10;" visibleRowCount="2" />
+            <TextField fx:id="txtEmail" layoutX="68.0" layoutY="457.0" onAction="#txtEmailOnAction" onKeyReleased="#txtEmailOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter email" style="-fx-background-radius: 10;" />
+            <TextField fx:id="txtMobile" layoutX="68.0" layoutY="517.0" onAction="#txtMobileOnAction" onKeyReleased="#txtMobileOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter mobile" style="-fx-background-radius: 10;" />
+            <Button fx:id="signUpBtn" layoutX="65.0" layoutY="575.0" mnemonicParsing="false" onAction="#signUpBtnOnAction" prefHeight="30.0" prefWidth="311.0" text="Sign Up" />
+            <Text layoutX="87.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account ?" />
+            <Hyperlink fx:id="loginHyperlink" layoutX="271.0" layoutY="626.0" onAction="#hyperlinkLoginOnAction" text="Login" />
+            <TextField fx:id="txtUserId" layoutX="67.0" layoutY="201.0" prefHeight="32.0" prefWidth="304.0" promptText="Enter userId" style="-fx-background-radius: 10;" />
+            <TextField fx:id="txtPasswordVisible" layoutX="69.0" layoutY="332.0" onKeyReleased="#txtUsernameOnKeyReleased" prefHeight="32.0" prefWidth="304.0" style="-fx-background-radius: 10;" visible="false" />
+            <PasswordField fx:id="txtPassword" layoutX="67.0" layoutY="332.0" onAction="#txtPasswordOnAction" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter password" />
+            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="338.0" layoutY="340.0" onMouseClicked="#passwordVisible">
+               <image>
+                  <Image url="@../assets/images/pw_eyeIcon.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtPassword2Visible" layoutX="67.0" layoutY="397.0" prefHeight="32.0" prefWidth="304.0" visible="false" />
+            <PasswordField fx:id="txtPassword2" layoutX="67.0" layoutY="392.0" onAction="#txtPassword2OnAction" onKeyReleased="#txtPassword2OnKeyReleased" prefHeight="37.0" prefWidth="304.0" promptText="Confirm password" />
+            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="335.0" layoutY="400.0" onMouseClicked="#confirmPasswordVisible">
+               <image>
+                  <Image url="@../assets/images/pw_eyeIcon.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="studentHeading" layoutX="117.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SIGN UP">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.42380952380952386" startX="0.5285714285714286" startY="0.48095238095238096">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7968810796737671" green="0.5029239654541016" blue="0.8421052694320679" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.49856236577033997" green="0.303606241941452" blue="0.7368420958518982" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+         </children>
+      </Pane>
+      <Text layoutX="569.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Text>
+      <Text layoutX="701.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="406.0" fitWidth="409.0" layoutX="553.0" layoutY="256.0">
+         <image>
+            <Image url="@../assets/images/signUp_img.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
