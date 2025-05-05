@@ -10,11 +10,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="loginForm" prefHeight="636.0" prefWidth="1034.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
+<AnchorPane fx:id="loginForm" prefHeight="603.0" prefWidth="1016.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginFormController">
    <children>
-      <AnchorPane fx:id="loginSide1" layoutX="-1.0" layoutY="-1.0" prefHeight="690.0" prefWidth="446.0" stylesheets="@../styles/login.css">
+      <AnchorPane fx:id="loginSide1" layoutX="-1.0" layoutY="-1.0" prefHeight="603.0" prefWidth="447.0" stylesheets="@../styles/login.css">
          <children>
-            <AnchorPane fx:id="loginSide3" layoutX="51.0" layoutY="57.0" prefHeight="581.0" prefWidth="396.0">
+            <AnchorPane fx:id="loginSide3" layoutX="51.0" layoutY="57.0" prefHeight="515.0" prefWidth="396.0">
                <children>
                   <Text fill="#f2e8e8" layoutX="44.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
                      <font>
@@ -25,9 +25,9 @@
                   <Text fill="#f5ecec" layoutX="44.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your account details" />
                   <Button fx:id="loginBtn" layoutX="44.0" layoutY="405.0" mnemonicParsing="false" onAction="#loginBtnOnAction" prefHeight="30.0" prefWidth="261.0" text="Login" />
                   <Text fill="#f2ecec" layoutX="66.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account ?" />
-                  <Hyperlink fx:id="signUpHyperlink" layoutX="222.0" layoutY="455.0" onAction="#signUpHyperlinkOnAction" text="Sign up" />
+                  <Hyperlink fx:id="signUpHyperlink" layoutX="208.0" layoutY="454.0" onAction="#signUpHyperlinkOnAction" text="Sign up" />
                   <PasswordField fx:id="txtPassword" layoutX="44.0" layoutY="302.0" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="30.0" prefWidth="261.0" promptText="Enter Password" style="-fx-background-radius: 10;" />
-                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="275.0" layoutY="302.0" onMouseClicked="#passwordVisible">
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="271.0" layoutY="305.0" onMouseClicked="#passwordVisible">
                      <image>
                         <Image url="@../assets/images/pw_eyeIcon.png" />
                      </image>
@@ -37,9 +37,9 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="loginSide2" layoutX="445.0" prefHeight="689.0" prefWidth="592.0" stylesheets="@../styles/login.css">
+      <AnchorPane fx:id="loginSide2" layoutX="445.0" prefHeight="603.0" prefWidth="571.0" stylesheets="@../styles/login.css">
          <children>
-            <AnchorPane fx:id="loginSide4" layoutY="40.0" prefHeight="613.0" prefWidth="558.0">
+            <AnchorPane fx:id="loginSide4" layoutY="40.0" prefHeight="523.0" prefWidth="524.0">
                <children>
                   <Text fill="#fffafa" layoutX="68.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To">
                      <font>
@@ -51,7 +51,7 @@
                         <Font size="33.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="376.0" fitWidth="508.0" layoutX="25.0" layoutY="208.0">
+                  <ImageView fitHeight="290.0" fitWidth="396.0" layoutX="59.0" layoutY="177.0">
                      <image>
                         <Image url="@../assets/images/login_img.jpg" />
                      </image>

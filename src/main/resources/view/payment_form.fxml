@@ -5,8 +5,6 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
@@ -15,9 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="paymentPane" prefHeight="1038.0" prefWidth="1590.0" stylesheets="@../styles/payment.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PaymentFormController">
+<AnchorPane fx:id="paymentPane" prefHeight="641.0" prefWidth="952.0" stylesheets="@../styles/payment.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PaymentFormController">
    <children>
-      <Text fx:id="studentHeading" layoutX="606.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGE PAYMENTS">
+      <Text fx:id="studentHeading" layoutX="292.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGE PAYMENTS">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
@@ -38,64 +36,59 @@
             </LinearGradient>
          </fill>
       </Text>
-      <Pane fx:id="paymentDetailPane" layoutX="87.0" layoutY="135.0" prefHeight="235.0" prefWidth="1249.0">
+      <Pane fx:id="paymentDetailPane" layoutX="14.0" layoutY="92.0" prefHeight="226.0" prefWidth="911.0">
          <children>
-            <Text layoutX="46.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID">
+            <Text layoutX="24.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment ID">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <TextField fx:id="txtPaymentID" layoutX="240.0" layoutY="36.0" promptText="Enter payment Id" />
-            <Text layoutX="455.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration ID">
+            <TextField fx:id="txtPaymentID" layoutX="125.0" layoutY="22.0" prefHeight="29.0" prefWidth="143.0" promptText="Enter payment Id" />
+            <Text layoutX="341.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration ID">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <ComboBox fx:id="cmbRegisterID" layoutX="615.0" layoutY="35.0" onAction="#cmbRegisterIDOnAction" opacity="0.66" prefHeight="26.0" prefWidth="160.0" promptText="Enter register Id" style="-fx-background-radius: 10;" visibleRowCount="2" />
-            <Text layoutX="840.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+            <ComboBox fx:id="cmbRegisterID" layoutX="468.0" layoutY="22.0" onAction="#cmbRegisterIDOnAction" opacity="0.66" prefHeight="29.0" prefWidth="135.0" promptText="Enter register Id" style="-fx-background-radius: 10;" visibleRowCount="2" />
+            <Text layoutX="643.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <TextField fx:id="txtPaymentDate" layoutX="977.0" layoutY="33.0" promptText="Enter payment date" />
-            <Text layoutX="46.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upfront Payment">
+            <TextField fx:id="txtPaymentDate" layoutX="696.0" layoutY="22.0" prefHeight="29.0" prefWidth="135.0" promptText="Enter payment date" />
+            <Text layoutX="24.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upfront Payment">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <TextField fx:id="txtUpfrontPayment" layoutX="240.0" layoutY="102.0" promptText="Enter upfront payment" />
-            <Text layoutX="455.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Amount">
+            <TextField fx:id="txtUpfrontPayment" layoutX="160.0" layoutY="89.0" prefHeight="29.0" prefWidth="143.0" promptText="Enter upfront payment" />
+            <Text layoutX="341.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Amount">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <TextField fx:id="txtTotalAmount" layoutX="615.0" layoutY="102.0" promptText="Enter total amount" />
-            <Text layoutX="840.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Due Amount">
+            <TextField fx:id="txtTotalAmount" layoutX="468.0" layoutY="87.0" prefHeight="29.0" prefWidth="135.0" promptText="Enter total amount" />
+            <Text layoutX="643.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Due Amount">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
-            <TextField fx:id="txtDueAmount" layoutX="977.0" layoutY="102.0" promptText="Enter due amount" />
-            <Button fx:id="saveBtn" layoutX="182.0" layoutY="178.0" mnemonicParsing="false" onAction="#saveBtnOnAction" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 12;" text="Save" />
-            <Button fx:id="updateBtn" layoutX="446.0" layoutY="178.0" mnemonicParsing="false" onAction="#updateBtnOnAction" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 12;" text="Update" />
-            <Button fx:id="deleteBtn" layoutX="706.0" layoutY="178.0" mnemonicParsing="false" onAction="#deleteBtnOnAction" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 12;" text="Delete" />
-            <Button fx:id="clearBtn" layoutX="974.0" layoutY="178.0" mnemonicParsing="false" onAction="#clearBtnOnAction" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 12;" text="Clear" />
+            <TextField fx:id="txtDueAmount" layoutX="747.0" layoutY="89.0" prefHeight="29.0" prefWidth="135.0" promptText="Enter due amount" />
+            <Button fx:id="saveBtn" layoutX="263.0" layoutY="155.0" mnemonicParsing="false" onAction="#saveBtnOnAction" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 12;" text="Save" />
+            <Button fx:id="updateBtn" layoutX="389.0" layoutY="155.0" mnemonicParsing="false" onAction="#updateBtnOnAction" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 12;" text="Update" />
+            <Button fx:id="deleteBtn" layoutX="513.0" layoutY="155.0" mnemonicParsing="false" onAction="#deleteBtnOnAction" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 12;" text="Delete" />
+            <Button fx:id="clearBtn" layoutX="636.0" layoutY="155.0" mnemonicParsing="false" onAction="#clearBtnOnAction" prefHeight="30.0" prefWidth="81.0" style="-fx-background-radius: 12;" text="Clear" />
          </children>
       </Pane>
-      <TableView fx:id="paymentTbl" layoutX="87.0" layoutY="450.0" prefHeight="472.0" prefWidth="1097.0">
+      <TableView fx:id="paymentTbl" layoutX="14.0" layoutY="345.0" prefHeight="267.0" prefWidth="911.0">
         <columns>
-          <TableColumn fx:id="colPaymentId" prefWidth="146.0" text="Payment ID" />
-          <TableColumn fx:id="colRegisterId" prefWidth="158.0" text="Registration ID" />
-            <TableColumn fx:id="colPaymentDate" prefWidth="188.0" text="Date" />
-            <TableColumn fx:id="colUpfrontPayment" prefWidth="218.0" text="Upfront Payment" />
-            <TableColumn fx:id="colTotalAmount" prefWidth="209.0" text="Total Amount" />
-            <TableColumn fx:id="colDueAmount" prefWidth="177.0" text="Due Amount" />
+          <TableColumn fx:id="colPaymentId" prefWidth="129.33331775665283" text="Payment ID" />
+          <TableColumn fx:id="colRegisterId" prefWidth="129.3332977294922" text="Registration ID" />
+            <TableColumn fx:id="colPaymentDate" prefWidth="151.33331298828125" text="Date" />
+            <TableColumn fx:id="colUpfrontPayment" prefWidth="167.99990844726562" text="Upfront Payment" />
+            <TableColumn fx:id="colTotalAmount" prefWidth="170.6666259765625" text="Total Amount" />
+            <TableColumn fx:id="colDueAmount" prefWidth="166.6666259765625" text="Due Amount" />
         </columns>
       </TableView>
-      <ImageView fitHeight="334.0" fitWidth="287.0" layoutX="1257.0" layoutY="527.0">
-         <image>
-            <Image url="@../assets/images/payment_img.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

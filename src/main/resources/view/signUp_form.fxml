@@ -17,28 +17,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="signForm" prefHeight="763.0" prefWidth="1061.0" stylesheets="@../styles/signUp.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SignUpFormController">
+<AnchorPane fx:id="signForm" prefHeight="697.0" prefWidth="990.0" stylesheets="@../styles/signUp.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SignUpFormController">
    <children>
-      <Pane fx:id="signUpDetails" layoutX="41.0" layoutY="42.0" prefHeight="680.0" prefWidth="438.0">
+      <Pane fx:id="signUpDetails" layoutX="35.0" layoutY="27.0" prefHeight="643.0" prefWidth="409.0">
          <children>
-            <TextField fx:id="txtUsername" layoutX="67.0" layoutY="267.0" onAction="#txtUsernameOnAction" onKeyReleased="#txtUsernameOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter username" style="-fx-background-radius: 10;" />
-            <ComboBox fx:id="cmbUser" layoutX="67.0" layoutY="134.0" opacity="0.66" prefHeight="37.0" prefWidth="304.0" promptText="User" style="-fx-background-radius: 10;" visibleRowCount="2" />
-            <TextField fx:id="txtEmail" layoutX="68.0" layoutY="457.0" onAction="#txtEmailOnAction" onKeyReleased="#txtEmailOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter email" style="-fx-background-radius: 10;" />
-            <TextField fx:id="txtMobile" layoutX="68.0" layoutY="517.0" onAction="#txtMobileOnAction" onKeyReleased="#txtMobileOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter mobile" style="-fx-background-radius: 10;" />
-            <Button fx:id="signUpBtn" layoutX="65.0" layoutY="575.0" mnemonicParsing="false" onAction="#signUpBtnOnAction" prefHeight="30.0" prefWidth="311.0" text="Sign Up" />
-            <Text layoutX="87.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account ?" />
-            <Hyperlink fx:id="loginHyperlink" layoutX="271.0" layoutY="626.0" onAction="#hyperlinkLoginOnAction" text="Login" />
-            <TextField fx:id="txtUserId" layoutX="67.0" layoutY="201.0" prefHeight="32.0" prefWidth="304.0" promptText="Enter userId" style="-fx-background-radius: 10;" />
+            <TextField fx:id="txtUsername" layoutX="67.0" layoutY="238.0" onAction="#txtUsernameOnAction" onKeyReleased="#txtUsernameOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter username" style="-fx-background-radius: 10;" />
+            <ComboBox fx:id="cmbUser" layoutX="67.0" layoutY="110.0" opacity="0.66" prefHeight="37.0" prefWidth="304.0" promptText="User" style="-fx-background-radius: 10;" visibleRowCount="2" />
+            <TextField fx:id="txtEmail" layoutX="68.0" layoutY="423.0" onAction="#txtEmailOnAction" onKeyReleased="#txtEmailOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter email" style="-fx-background-radius: 10;" />
+            <TextField fx:id="txtMobile" layoutX="67.0" layoutY="481.0" onAction="#txtMobileOnAction" onKeyReleased="#txtMobileOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter mobile" style="-fx-background-radius: 10;" />
+            <Button fx:id="signUpBtn" layoutX="64.0" layoutY="536.0" mnemonicParsing="false" onAction="#signUpBtnOnAction" prefHeight="30.0" prefWidth="311.0" text="Sign Up" />
+            <Text layoutX="92.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account ?" />
+            <Hyperlink fx:id="loginHyperlink" layoutX="247.0" layoutY="589.0" onAction="#hyperlinkLoginOnAction" text="Login" />
+            <TextField fx:id="txtUserId" layoutX="67.0" layoutY="176.0" prefHeight="32.0" prefWidth="304.0" promptText="Enter userId" style="-fx-background-radius: 10;" />
             <TextField fx:id="txtPasswordVisible" layoutX="69.0" layoutY="332.0" onKeyReleased="#txtUsernameOnKeyReleased" prefHeight="32.0" prefWidth="304.0" style="-fx-background-radius: 10;" visible="false" />
-            <PasswordField fx:id="txtPassword" layoutX="67.0" layoutY="332.0" onAction="#txtPasswordOnAction" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter password" />
-            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="338.0" layoutY="340.0" onMouseClicked="#passwordVisible">
+            <PasswordField fx:id="txtPassword" layoutX="67.0" layoutY="300.0" onAction="#txtPasswordOnAction" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter password" />
+            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="335.0" layoutY="305.0" onMouseClicked="#passwordVisible">
                <image>
                   <Image url="@../assets/images/pw_eyeIcon.png" />
                </image>
             </ImageView>
             <TextField fx:id="txtPassword2Visible" layoutX="67.0" layoutY="397.0" prefHeight="32.0" prefWidth="304.0" visible="false" />
-            <PasswordField fx:id="txtPassword2" layoutX="67.0" layoutY="392.0" onAction="#txtPassword2OnAction" onKeyReleased="#txtPassword2OnKeyReleased" prefHeight="37.0" prefWidth="304.0" promptText="Confirm password" />
-            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="335.0" layoutY="400.0" onMouseClicked="#confirmPasswordVisible">
+            <PasswordField fx:id="txtPassword2" layoutX="67.0" layoutY="362.0" onAction="#txtPassword2OnAction" onKeyReleased="#txtPassword2OnKeyReleased" prefHeight="37.0" prefWidth="304.0" promptText="Confirm password" />
+            <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="335.0" layoutY="370.0" onMouseClicked="#confirmPasswordVisible">
                <image>
                   <Image url="@../assets/images/pw_eyeIcon.png" />
                </image>

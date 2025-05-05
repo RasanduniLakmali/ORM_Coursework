@@ -78,14 +78,16 @@ public class LoginFormController {
         boolean isPasswordMatch = PasswordUtils.isPasswordMatch(plainPassword, hashedPassword);
 
         if (isPasswordMatch) {
-            new Alert(Alert.AlertType.CONFIRMATION, "Login successful!").show();
+            // Show login success alert first
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Login successful!");
+            alert.showAndWait(); // Wait until the user closes the alert
 
+            // Then load the dashboard
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/dashboard_form.fxml"));
             Parent root = loader.load();
 
             DashboardFormController dashboardController = loader.getController();
 
-            // If the user type is "Admission coordinator", disable buttons in the dashboard
             if (userType.equalsIgnoreCase("Admission coordinator")) {
                 dashboardController.disableButtons(userType);
             }
@@ -95,7 +97,9 @@ public class LoginFormController {
             stage.setResizable(false);
             stage.show();
 
+            // Now hide the login window
             loginForm.getScene().getWindow().hide();
+
 
         } else {
             new Alert(Alert.AlertType.ERROR, "Invalid credentials!").show();

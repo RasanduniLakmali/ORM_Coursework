@@ -9,181 +9,171 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="dashboardForm" prefHeight="1013.0" prefWidth="1858.0" stylesheets="@../styles/dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormController">
+<AnchorPane fx:id="dashboardForm" prefHeight="663.0" prefWidth="1229.0" stylesheets="@../styles/dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardFormController">
    <children>
-      <AnchorPane fx:id="sidebar" layoutX="28.0" layoutY="72.0" prefHeight="874.0" prefWidth="221.0">
+      <AnchorPane fx:id="sidebar" layoutX="24.0" layoutY="47.0" prefHeight="533.0" prefWidth="197.0">
          <children>
-            <ImageView layoutX="77.0" layoutY="27.0">
+            <ImageView fitHeight="43.0" fitWidth="36.0" layoutX="81.0" layoutY="20.0">
                <image>
                   <Image url="@../assets/images/academy_img.png" />
                </image>
             </ImageView>
-            <Text fill="#eeebeb" layoutX="24.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CURLINARY ACADEMY">
+            <Text fill="#eeebeb" layoutX="36.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CURLINARY ACADEMY" wrappingWidth="150.75653076171875">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="13.0" />
                </font>
             </Text>
-            <Button fx:id="dashboardBtn" layoutX="21.0" layoutY="172.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="37.0" prefWidth="172.0" style="-fx-background-color: #6b419e;" text="      Dashboard">
+            <Button fx:id="dashboardBtn" layoutX="57.0" layoutY="122.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #6b419e;" text="      Dashboard">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="12.0" />
                </font></Button>
-            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="28.0" layoutY="179.0">
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="63.0" layoutY="129.0">
                <image>
                   <Image url="@../assets/images/home_icon.png" />
                </image>
             </ImageView>
-            <Button fx:id="userBtn" layoutX="19.0" layoutY="566.0" mnemonicParsing="false" onAction="#btnUserOnAction" prefHeight="37.0" prefWidth="166.0" style="-fx-background-color: #6b419e;" text="User">
-               <font>
-                  <Font size="15.0" />
-               </font></Button>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="570.0">
+            <Button fx:id="userBtn" layoutX="58.0" layoutY="358.0" mnemonicParsing="false" onAction="#btnUserOnAction" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: #6b419e;" text="   User" />
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="63.0" layoutY="365.0">
                <image>
                   <Image url="@../assets/images/user_icon.png" />
                </image>
             </ImageView>
-            <Button fx:id="studentBtn" layoutX="18.0" layoutY="250.0" mnemonicParsing="false" onAction="#btnStudentOAction" prefHeight="37.0" prefWidth="172.0" style="-fx-background-color: #6b419e;" text="  Student">
+            <Button fx:id="studentBtn" layoutX="52.0" layoutY="169.0" mnemonicParsing="false" onAction="#btnStudentOAction" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #6b419e;" text="       Student">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="12.0" />
                </font></Button>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="254.0">
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="63.0" layoutY="176.0">
                <image>
                   <Image url="@../assets/images/student_icon.png" />
                </image>
             </ImageView>
-            <Button fx:id="courseBtn" layoutX="18.0" layoutY="330.0" mnemonicParsing="false" onAction="#BtnCourseOnAction" prefHeight="37.0" prefWidth="172.0" style="-fx-background-color: #6b419e;" text=" Course">
+            <Button fx:id="courseBtn" layoutX="52.0" layoutY="216.0" mnemonicParsing="false" onAction="#BtnCourseOnAction" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #6b419e;" text="      Course">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Button fx:id="paymentBtn" layoutX="19.0" layoutY="488.0" mnemonicParsing="false" onAction="#BtnPaymentOnAction" prefHeight="37.0" prefWidth="166.0" style="-fx-background-color: #6b419e;" text="     Payment">
+            <Button fx:id="paymentBtn" layoutX="58.0" layoutY="312.0" mnemonicParsing="false" onAction="#BtnPaymentOnAction" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: #6b419e;" text="        Payment" />
+            <Button fx:id="registrationBtn" layoutX="52.0" layoutY="264.0" mnemonicParsing="false" onAction="#registrationBtnOnAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #6b419e;" text="           Registration">
                <font>
-                  <Font size="15.0" />
+                  <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Button fx:id="registrationBtn" layoutX="21.0" layoutY="408.0" mnemonicParsing="false" onAction="#registrationBtnOnAction" prefHeight="37.0" prefWidth="166.0" style="-fx-background-color: #6b419e;" text="          Registration">
-               <font>
-                  <Font size="15.0" />
-               </font></Button>
-            <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="28.0" layoutY="334.0">
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="63.0" layoutY="223.0">
                <image>
                   <Image url="@../assets/images/course_icon3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="29.0" layoutY="415.0">
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="63.0" layoutY="271.0">
                <image>
                   <Image url="@../assets/images/course_icon.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="28.0" layoutY="492.0">
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="63.0" layoutY="319.0">
                <image>
                   <Image url="@../assets/images/payment_icon.png" />
                </image>
             </ImageView>
-            <Button fx:id="logoutBtn" layoutX="21.0" layoutY="731.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="37.0" prefWidth="166.0" style="-fx-background-color: #6b419e;" text="Log out">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="26.0" layoutY="735.0">
+            <Button fx:id="logoutBtn" layoutX="58.0" layoutY="411.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: #6b419e;" text="      Log out" />
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="62.0" layoutY="418.0">
                <image>
                   <Image url="@../assets/images/logout_icon.png" />
                </image>
             </ImageView>
          </children></AnchorPane>
-      <AnchorPane fx:id="centerNode" layoutX="267.0" prefHeight="1038.0" prefWidth="1590.0">
+      <AnchorPane fx:id="centerNode" layoutX="252.0" prefHeight="663.0" prefWidth="925.0">
          <children>
-            <ImageView fitHeight="1038" fitWidth="1590">
+            <ImageView fitHeight="663.0" fitWidth="976.0">
                <image>
                   <Image url="@../assets/images/dashboard_bg.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="56.0" fitWidth="59.0" layoutX="1406.0" layoutY="47.0">
+            <ImageView fitHeight="43.0" fitWidth="42.0" layoutX="696.0" layoutY="58.0">
                <image>
                   <Image url="@../assets/images/user_icon2.png" />
                </image>
             </ImageView>
-            <AnchorPane fx:id="countSection" layoutX="69.0" layoutY="238.0" prefHeight="617.0" prefWidth="863.0">
+            <AnchorPane fx:id="countSection" layoutX="47.0" layoutY="147.0" prefHeight="468.0" prefWidth="537.0">
                <children>
-                  <Pane layoutX="73.0" layoutY="37.0" prefHeight="217.0" prefWidth="279.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+                  <Pane layoutX="53.0" layoutY="37.0" prefHeight="159.0" prefWidth="206.0" style="-fx-background-color: white; -fx-background-radius: 30;">
                      <children>
-                        <Text layoutX="68.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENTS">
+                        <Text layoutX="44.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENTS" wrappingWidth="127.33333333333329">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font>
                         </Text>
-                        <ImageView fitHeight="77.0" fitWidth="73.0" layoutX="93.0" layoutY="126.0">
+                        <ImageView fitHeight="37.0" fitWidth="42.0" layoutX="78.0" layoutY="99.0">
                            <image>
                               <Image url="@../assets/images/student_icon2.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="lblStudentCount" layoutX="115.0" layoutY="65.0" prefHeight="37.0" prefWidth="50.0">
+                        <Label fx:id="lblStudentCount" layoutX="78.0" layoutY="57.0" prefHeight="32.0" prefWidth="42.0">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font></Label>
                      </children>
                   </Pane>
-                  <Pane layoutX="486.0" layoutY="37.0" prefHeight="217.0" prefWidth="279.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+                  <Pane layoutX="307.0" layoutY="37.0" prefHeight="159.0" prefWidth="197.0" style="-fx-background-color: white; -fx-background-radius: 30;">
                      <children>
-                        <Text layoutX="68.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COURSES">
+                        <Text layoutX="45.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COURSES" wrappingWidth="117.0">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font>
                         </Text>
-                        <ImageView layoutX="99.0" layoutY="123.0">
+                        <ImageView fitHeight="37.0" fitWidth="36.0" layoutX="81.0" layoutY="100.0">
                            <image>
                               <Image url="@../assets/images/course_icon2.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="lblCourseCount" layoutX="115.0" layoutY="62.0" prefHeight="37.0" prefWidth="50.0">
+                        <Label fx:id="lblCourseCount" layoutX="81.0" layoutY="53.0" prefHeight="32.0" prefWidth="36.0">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font></Label>
                      </children>
                   </Pane>
-                  <Pane layoutX="281.0" layoutY="336.0" prefHeight="204.0" prefWidth="279.0" style="-fx-background-color: white; -fx-background-radius: 30;">
+                  <Pane layoutX="189.0" layoutY="231.0" prefHeight="173.0" prefWidth="206.0" style="-fx-background-color: white; -fx-background-radius: 30;">
                      <children>
-                        <Text layoutX="31.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRATIONS">
+                        <Text layoutX="34.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRATIONS" wrappingWidth="150.7565307617188">
                            <font>
-                              <Font name="System Bold" size="24.0" />
+                              <Font name="System Bold" size="18.0" />
                            </font>
                         </Text>
-                        <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="108.0" layoutY="128.0">
+                        <ImageView fitHeight="37.0" fitWidth="36.0" layoutX="85.0" layoutY="106.0">
                            <image>
                               <Image url="@../assets/images/registration_icon.png" />
                            </image>
                         </ImageView>
-                        <Label fx:id="lblRegisterCount" layoutX="115.0" layoutY="71.0" prefHeight="37.0" prefWidth="50.0">
+                        <Label fx:id="lblRegisterCount" layoutX="82.0" layoutY="52.0" prefHeight="32.0" prefWidth="42.0">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font></Label>
                      </children>
                   </Pane>
                </children></AnchorPane>
-            <Pane fx:id="datePane" layoutX="83.0" layoutY="99.0" prefHeight="68.0" prefWidth="210.0">
+            <Pane fx:id="datePane" layoutX="118.0" layoutY="59.0" prefHeight="56.0" prefWidth="185.0">
                <children>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="141.0" layoutY="9.0">
+                  <ImageView fitHeight="37.0" fitWidth="36.0" layoutX="141.0" layoutY="9.0">
                      <image>
                         <Image url="@../assets/images/date_icon.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="lblDate" layoutX="14.0" layoutY="17.0" prefHeight="37.0" prefWidth="127.0" />
+                  <Label fx:id="lblDate" layoutX="14.0" layoutY="17.0" prefHeight="24.0" prefWidth="117.0" />
                </children>
             </Pane>
-            <Pane fx:id="timePane" layoutX="343.0" layoutY="99.0" prefHeight="68.0" prefWidth="210.0">
+            <Pane fx:id="timePane" layoutX="327.0" layoutY="59.0" prefHeight="56.0" prefWidth="197.0">
                <children>
-                  <ImageView fitHeight="43.0" fitWidth="42.0" layoutX="154.0" layoutY="13.0">
+                  <ImageView fitHeight="37.0" fitWidth="36.0" layoutX="154.0" layoutY="13.0">
                      <image>
                         <Image url="@../assets/images/clock_icon.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="lblTime" layoutX="25.0" layoutY="16.0" prefHeight="37.0" prefWidth="117.0" />
+                  <Label fx:id="lblTime" layoutX="25.0" layoutY="16.0" prefHeight="24.0" prefWidth="117.0" />
                </children>
             </Pane>
-            <Label fx:id="lblAdmin" layoutX="1216.0" layoutY="60.0" prefHeight="43.0" prefWidth="172.0" />
-            <ImageView fitHeight="311.0" fitWidth="410.0" layoutX="980.0" layoutY="208.0">
+            <Label fx:id="lblAdmin" layoutX="601.0" layoutY="71.0" prefHeight="17.0" prefWidth="95.0" />
+            <ImageView fitHeight="153.0" fitWidth="240.0" layoutX="642.0" layoutY="164.0">
                <image>
                   <Image url="@../assets/images/dashboard_img2.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="418.0" fitWidth="311.0" layoutX="1199.0" layoutY="570.0">
+            <ImageView fitHeight="226.0" fitWidth="166.0" layoutX="745.0" layoutY="350.0">
                <image>
                   <Image url="@../assets/images/dashboard_img1.jpg" />
                </image>
