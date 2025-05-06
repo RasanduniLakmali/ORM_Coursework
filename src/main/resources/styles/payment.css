@@ -1,23 +1,307 @@
-#paymentDetailPane{
-    -fx-border-color: purple;
+/* Root styles and variables */
+.root {
+    -fx-background-color: white;
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Color palette */
+    -fx-primary: #532c6c;      /* Darker purple for sidebar */
+    -fx-primary-light: #9c79d4; /* Light purple for highlights */
+    -fx-primary-dark: #4a2b73;  /* Dark purple for hover states */
+    -fx-secondary: #3a3a3a;     /* Dark grey for text */
+    -fx-light-grey: #f5f5f5;    /* Light background color */
+    -fx-mid-grey: #e0e0e0;      /* Border colors */
+    -fx-dark-grey: #6b6b6b;     /* Secondary text color */
+}
+
+/* AnchorPane styling */
+#paymentPane {
+    -fx-background-color: white;
+}
+
+/* Heading styling */
+#paymentHeading {
+    -fx-fill: linear-gradient(to right, #c782e0, #9c42d4);
+    -fx-effect: dropshadow(three-pass-box, rgba(108, 66, 160, 0.3), 8, 0, 0, 0);
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form panel styling */
+#paymentDetailPane {
+    -fx-background-color: white;
+    -fx-border-color: #e0adf7;
+    -fx-border-width: 1;
     -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 0);
+    -fx-padding: 20;
 }
-#txtPaymentID,
-#cmbRegisterID,
-#txtPaymentDate,
-#txtUpfrontPayment,
-#txtTotalAmount,
-#txtDueAmount{
-    -fx-border-color: purple;
-    -fx-border-width: 2px;
+
+/* Text field styling */
+.text-field {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-border-color: #e0adf7;
+    -fx-border-radius: 15;
+    -fx-padding: 8;
+    -fx-prompt-text-fill: #9e9e9e;
+    -fx-font-size: 13px;
 }
-#saveBtn,
-#updateBtn,
-#deleteBtn,
-#clearBtn{
-    -fx-background-color: #bc3ebc;
+
+.text-field:focused {
+    -fx-background-color: white;
+    -fx-border-color: -fx-primary-light;
+    -fx-border-width: 1.5;
+}
+
+/* Label and Text styling */
+Text {
+    -fx-fill: -fx-secondary;
+    -fx-font-weight: bold;
+}
+
+/* Button styling - Basic buttons */
+.button {
+    -fx-background-radius: 30;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 8 15;
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 1);
+}
+
+.button:pressed {
+    -fx-opacity: 0.8;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* ComboBox styling */
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-border-color: #e0adf7;
+    -fx-border-radius: 15;
+    -fx-padding: 2;
+}
+
+.combo-box:focused {
+    -fx-background-color: white;
+    -fx-border-color: -fx-primary-light;
+    -fx-border-width: 1.5;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: -fx-primary-light;
+    -fx-background-radius: 0 15 15 0;
+}
+
+.combo-box .arrow {
+    -fx-background-color: white;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}
+
+.combo-box-popup .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: -fx-secondary;
+    -fx-padding: 5 10;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: -fx-light-grey;
+}
+
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: -fx-primary-light;
     -fx-text-fill: white;
 }
-.table-view .column-header{
-    -fx-background-color: #c088c0;
+
+/* TableView styling */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-border-color: -fx-mid-grey;
+    -fx-border-radius: 10;
+    -fx-padding: 0;
+    -fx-border-width: 1;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 10 10 0 0;
+    -fx-padding: 5;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 35;
+    -fx-border-width: 0 0 0 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: -fx-secondary;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+.table-view .table-row-cell {
+    -fx-cell-size: 40;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f9f4ff;
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: white;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: rgba(156, 121, 212, 0.3);
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: rgba(156, 121, 212, 0.15);
+}
+
+.table-view .table-cell {
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent;
+    -fx-font-size: 13px;
+}
+
+.table-view .scroll-bar:vertical,
+.table-view .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+/* Search field styling */
+#txtSearchId {
+    -fx-background-color: white;
+    -fx-border-color: #e0adf7;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 8 15;
+    -fx-prompt-text-fill: -fx-dark-grey;
+}
+
+/* Search button styling - Fix for white text */
+#searchBtn {
+    -fx-background-color: #e0adf7;
+    -fx-text-fill: -fx-secondary;
+    -fx-border-color: -fx-mid-grey;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-font-size: 14px;
+}
+
+/* View button styling - Fix for white text */
+#viewBtn {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: -fx-secondary;
+    -fx-border-color: -fx-mid-grey;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-font-size: 13px;
+}
+
+/* Different styling for CRUD buttons */
+#saveBtn {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+}
+
+#updateBtn {
+    -fx-background-color: #2196f3;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+}
+
+#deleteBtn {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+}
+
+#clearBtn {
+    -fx-background-color: #ff9800;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+}
+
+/* Add sidebar styling for navigation menu */
+.sidebar {
+    -fx-background-color: -fx-primary;
+    -fx-background-radius: 0 15 15 0;
+    -fx-padding: 20 10;
+}
+
+.sidebar-button {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 15;
+    -fx-alignment: CENTER_LEFT;
+    -fx-graphic-text-gap: 10;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar-button:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.4);
+}
+
+.sidebar-logo-text {
+    -fx-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-selected {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Custom styling for logo area */
+.logo-container {
+    -fx-padding: 15 0 25 0;
+    -fx-alignment: center;
+}
+
+/* Title text styling */
+.page-title {
+    -fx-fill: linear-gradient(to right, #b17ed7, #ae56e8);
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 1, 0, 0, 1);
+}
+
+/* Add responsiveness */
+@media screen and (max-width: 800px) {
+    #studentForm {
+        -fx-min-width: 200;
+    }
+
+    .text-field, .combo-box {
+        -fx-font-size: 12px;
+    }
+
+    .button {
+        -fx-font-size: 12px;
+        -fx-padding: 6 12;
+    }
 }

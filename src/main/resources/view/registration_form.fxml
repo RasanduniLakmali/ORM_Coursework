@@ -15,7 +15,7 @@
 
 <AnchorPane fx:id="registerPane" prefHeight="746.0" prefWidth="974.0" stylesheets="@../styles/registration.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.RegistrationFormController">
    <children>
-      <Text fx:id="courseHeading" layoutX="303.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRATION FORM">
+      <Text fx:id="registerPageHeading" layoutX="303.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRATION FORM">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>

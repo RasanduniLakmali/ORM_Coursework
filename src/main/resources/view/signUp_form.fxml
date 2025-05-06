@@ -17,9 +17,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="signForm" prefHeight="697.0" prefWidth="990.0" stylesheets="@../styles/signUp.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SignUpFormController">
+<AnchorPane fx:id="signForm" prefHeight="683.0" prefWidth="966.0" stylesheets="@../styles/signUp.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SignUpFormController">
    <children>
-      <Pane fx:id="signUpDetails" layoutX="35.0" layoutY="27.0" prefHeight="643.0" prefWidth="409.0">
+      <Pane fx:id="signUpDetails" layoutX="35.0" layoutY="27.0" prefHeight="627.0" prefWidth="400.0">
          <children>
             <TextField fx:id="txtUsername" layoutX="67.0" layoutY="238.0" onAction="#txtUsernameOnAction" onKeyReleased="#txtUsernameOnKeyReleased" prefHeight="32.0" prefWidth="304.0" promptText="Enter username" style="-fx-background-radius: 10;" />
             <ComboBox fx:id="cmbUser" layoutX="67.0" layoutY="110.0" opacity="0.66" prefHeight="37.0" prefWidth="304.0" promptText="User" style="-fx-background-radius: 10;" visibleRowCount="2" />
@@ -66,7 +66,7 @@
             </Text>
          </children>
       </Pane>
-      <Text layoutX="569.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management">
+      <Text layoutX="569.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Curlinary Management">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
@@ -76,7 +76,7 @@
             <Font name="System Bold" size="31.0" />
          </font>
       </Text>
-      <ImageView fitHeight="406.0" fitWidth="409.0" layoutX="553.0" layoutY="256.0">
+      <ImageView fitHeight="345.0" fitWidth="328.0" layoutX="553.0" layoutY="256.0">
          <image>
             <Image url="@../assets/images/signUp_img.png" />
          </image>

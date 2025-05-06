@@ -1,22 +1,168 @@
-#signForm{
-    -fx-background-color: #e3bdde;
+/* Global Styles */
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-background-color: linear-gradient(to bottom right, #9b59b6, #6c3483); /* Purple gradient background */
 }
-#signUpDetails{
-    -fx-background-color: #e6d3e3;
-    -fx-background-radius: 20;
+
+/* Sign Up Panel */
+#signForm {
+    -fx-background-color: linear-gradient(to bottom right, #9b59b6, #6c3483); /* Purple gradient background */
 }
-#signUpBtn{
-    -fx-background-color: #c741b7;
-    -fx-background-radius: 10;
-    -fx-focus-traversable: pointer;
+
+#signUpDetails {
+    -fx-background-color: #ffffff; /* White background for form */
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 15, 0, 0, 0);
+    -fx-padding: 15px;
 }
-#cmbUser,
-#txtUserId,
-#txtUsername,
-#txtPassword,
-#txtPassword2,
-#txtEmail,
-#txtMobile{
-    -fx-border-color: purple;
+
+/* Text Fields */
+.text-field, .password-field {
+    -fx-background-color: #f8f9fa;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 10px;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.05), 1, 0, 0, 0);
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-prompt-text-fill: #9e9e9e;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #8e44ad; /* Purple border on focus */
     -fx-border-width: 2px;
+    -fx-effect: dropshadow(three-pass-box, rgba(142,68,173,0.3), 3, 0, 0, 0);
+}
+
+/* ComboBox Styles */
+.combo-box {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 0;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #8e44ad; /* Purple arrow */
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #333333;
+    -fx-padding: 4px 8px;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #f0e6f6; /* Light purple on hover */
+    -fx-text-fill: #8e44ad;
+}
+
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #e1d1ec; /* Light purple for selected item */
+    -fx-text-fill: #8e44ad;
+}
+
+/* Button Styles */
+#signUpBtn {
+    -fx-background-color: #8e44ad; /* Purple */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 0);
+}
+
+#signUpBtn:hover {
+    -fx-background-color: #9b59b6; /* Lighter purple */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8, 0, 0, 0);
+}
+
+#signUpBtn:pressed {
+    -fx-background-color: #6c3483; /* Darker purple */
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 0, 0);
+}
+
+/* Hyperlink Styles */
+.hyperlink {
+    -fx-text-fill: #8e44ad; /* Purple */
+    -fx-font-weight: bold;
+    -fx-underline: false;
+    -fx-border-width: 0;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #9b59b6; /* Lighter purple */
+    -fx-underline: true;
+}
+
+.hyperlink:pressed {
+    -fx-text-fill: #6c3483; /* Darker purple */
+}
+
+/* Text Styles */
+.text {
+    -fx-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 3, 0, 0, 0);
+}
+
+#signUpDetails .text {
+    -fx-fill: #333333; /* Dark text inside white panel */
+    -fx-effect: none;
+}
+
+#studentHeading {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+/* Password Eye Icon */
+.image-view {
+    -fx-cursor: hand;
+    -fx-opacity: 0.7;
+}
+
+.image-view:hover {
+    -fx-opacity: 1.0;
+}
+
+/* Main Image */
+#signForm > ImageView {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 15, 0, 0, 0);
+    -fx-background-radius: 15;
+}
+
+/* Title Text */
+#signForm > Text {
+    -fx-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.3), 10, 0, 0, 0);
+}
+
+/* Animation for Signup Button */
+#signUpBtn {
+    -fx-transition: -fx-background-color 0.3s, -fx-effect 0.3s;
+}
+
+/* Make text inside the white panel dark */
+#signUpDetails Text {
+    -fx-fill: #333333;
+}
+
+/* Special styling for the SIGN UP heading */
+#studentHeading {
+    -fx-effect: dropshadow(gaussian, rgba(142,68,173,0.5), 8, 0, 0, 0);
 }

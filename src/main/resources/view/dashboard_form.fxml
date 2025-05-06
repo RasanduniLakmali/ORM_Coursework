@@ -23,7 +23,7 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Text>
-            <Button fx:id="dashboardBtn" layoutX="57.0" layoutY="122.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #6b419e;" text="      Dashboard">
+            <Button fx:id="dashboardBtn" layoutX="52.0" layoutY="122.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #6b419e;" text="        Dashboard">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
@@ -32,13 +32,13 @@
                   <Image url="@../assets/images/home_icon.png" />
                </image>
             </ImageView>
-            <Button fx:id="userBtn" layoutX="58.0" layoutY="358.0" mnemonicParsing="false" onAction="#btnUserOnAction" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: #6b419e;" text="   User" />
+            <Button fx:id="userBtn" layoutX="53.0" layoutY="358.0" mnemonicParsing="false" onAction="#btnUserOnAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #6b419e;" text="        User" />
             <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="63.0" layoutY="365.0">
                <image>
                   <Image url="@../assets/images/user_icon.png" />
                </image>
             </ImageView>
-            <Button fx:id="studentBtn" layoutX="52.0" layoutY="169.0" mnemonicParsing="false" onAction="#btnStudentOAction" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #6b419e;" text="       Student">
+            <Button fx:id="studentBtn" layoutX="52.0" layoutY="169.0" mnemonicParsing="false" onAction="#btnStudentOAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #6b419e;" text="       Student">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
@@ -47,12 +47,12 @@
                   <Image url="@../assets/images/student_icon.png" />
                </image>
             </ImageView>
-            <Button fx:id="courseBtn" layoutX="52.0" layoutY="216.0" mnemonicParsing="false" onAction="#BtnCourseOnAction" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #6b419e;" text="      Course">
+            <Button fx:id="courseBtn" layoutX="52.0" layoutY="216.0" mnemonicParsing="false" onAction="#BtnCourseOnAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #6b419e;" text="         Course">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Button fx:id="paymentBtn" layoutX="58.0" layoutY="312.0" mnemonicParsing="false" onAction="#BtnPaymentOnAction" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: #6b419e;" text="        Payment" />
-            <Button fx:id="registrationBtn" layoutX="52.0" layoutY="264.0" mnemonicParsing="false" onAction="#registrationBtnOnAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #6b419e;" text="           Registration">
+            <Button fx:id="paymentBtn" layoutX="52.0" layoutY="312.0" mnemonicParsing="false" onAction="#BtnPaymentOnAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #6b419e;" text="        Payment" />
+            <Button fx:id="registrationBtn" layoutX="52.0" layoutY="264.0" mnemonicParsing="false" onAction="#registrationBtnOnAction" prefHeight="37.0" prefWidth="135.0" style="-fx-background-color: #6b419e;" text="         Registration">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
@@ -71,7 +71,7 @@
                   <Image url="@../assets/images/payment_icon.png" />
                </image>
             </ImageView>
-            <Button fx:id="logoutBtn" layoutX="58.0" layoutY="411.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: #6b419e;" text="      Log out" />
+            <Button fx:id="logoutBtn" layoutX="52.0" layoutY="411.0" mnemonicParsing="false" onAction="#btnLogoutOnAction" prefHeight="37.0" prefWidth="127.0" style="-fx-background-color: #6b419e;" text="      Log out" />
             <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="62.0" layoutY="418.0">
                <image>
                   <Image url="@../assets/images/logout_icon.png" />
@@ -85,7 +85,7 @@
                   <Image url="@../assets/images/dashboard_bg.jpg" />
                </image>
             </ImageView>
-            <ImageView fitHeight="43.0" fitWidth="42.0" layoutX="696.0" layoutY="58.0">
+            <ImageView fitHeight="43.0" fitWidth="42.0" layoutX="846.0" layoutY="59.0">
                <image>
                   <Image url="@../assets/images/user_icon2.png" />
                </image>
@@ -167,7 +167,7 @@
                   <Label fx:id="lblTime" layoutX="25.0" layoutY="16.0" prefHeight="24.0" prefWidth="117.0" />
                </children>
             </Pane>
-            <Label fx:id="lblAdmin" layoutX="601.0" layoutY="71.0" prefHeight="17.0" prefWidth="95.0" />
+            <Label fx:id="lblAdmin" layoutX="745.0" layoutY="71.0" prefHeight="17.0" prefWidth="95.0" />
             <ImageView fitHeight="153.0" fitWidth="240.0" layoutX="642.0" layoutY="164.0">
                <image>
                   <Image url="@../assets/images/dashboard_img2.jpg" />

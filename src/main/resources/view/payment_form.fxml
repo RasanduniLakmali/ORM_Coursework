@@ -15,7 +15,7 @@
 
 <AnchorPane fx:id="paymentPane" prefHeight="641.0" prefWidth="952.0" stylesheets="@../styles/payment.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PaymentFormController">
    <children>
-      <Text fx:id="studentHeading" layoutX="292.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGE PAYMENTS">
+      <Text fx:id="paymentHeading" layoutX="292.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGE PAYMENTS">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>

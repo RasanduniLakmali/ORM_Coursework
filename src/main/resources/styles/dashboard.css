@@ -1,35 +1,246 @@
-#sidebar{
-    -fx-background-color: #6b419e;
-    -fx-background-radius: 30;
-}
-#countSection{
-    -fx-background-color: #dbdcdc;
-    -fx-background-radius: 30;
+/*#sidebar{*/
+/*    -fx-background-color: #6b419e;*/
+/*    -fx-background-radius: 30;*/
+/*}*/
+/*#countSection{*/
+/*    -fx-background-color: #dbdcdc;*/
+/*    -fx-background-radius: 30;*/
+/*}*/
+
+/*#graphSection{*/
+/*    -fx-background-color: #dbdcdc;*/
+/*    -fx-background-radius: 30;*/
+/*}*/
+/*#dashboardBtn,*/
+/*#userBtn,*/
+/*#studentBtn,*/
+/*#courseBtn,*/
+/*#paymentBtn,*/
+/*#registrationBtn,*/
+/*#logoutBtn{*/
+/*    -fx-text-fill: white;*/
+/*}*/
+
+/*#count1,*/
+/*#count2,*/
+/*#count3{*/
+/*    -fx-text-fill: #6b419e;*/
+/*    -fx-font-weight: 100;*/
+/*}*/
+
+/*#datePane,*/
+/*#timePane{*/
+/*    -fx-background-color: #dbdcdc;*/
+/*}*/
+
+/* ========== MAIN LAYOUT ========== */
+#dashboardForm {
+    -fx-background-color: #f8f9fa;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
 }
 
-#graphSection{
-    -fx-background-color: #dbdcdc;
-    -fx-background-radius: 30;
+/* ========== SIDEBAR STYLING ========== */
+#sidebar {
+    -fx-background-color: linear-gradient(to bottom, #42275a, #734b6d);
+    -fx-background-radius: 0 20 20 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);
+    -fx-padding: 15;
 }
-#dashboardBtn,
-#userBtn,
-#studentBtn,
-#courseBtn,
-#paymentBtn,
-#registrationBtn,
-#logoutBtn{
+
+/* Academy Title */
+#sidebar Text {
+    -fx-fill: white;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 3, 0, 0, 0);
+}
+
+/* ========== BUTTON STYLING ========== */
+.button {
+    -fx-background-color: rgba(107, 65, 158, 0.7);
     -fx-text-fill: white;
+    -fx-background-radius: 30;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-padding: 10 15;
+    -fx-alignment: CENTER_LEFT;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 3, 0, 0, 0);
 }
 
-#count1,
-#count2,
-#count3{
-    -fx-text-fill: #6b419e;
-    -fx-font-weight: 100;
+/* Premium Hover Effect for Buttons */
+.button:hover {
+    -fx-background-color: #9370DB;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 2);
+    -fx-translate-x: 5;
+    -fx-scale-y: 1.05;
+    -fx-text-fill: white;
+    -fx-font-size: 12.5;
 }
 
-#datePane,
-#timePane{
-    -fx-background-color: #dbdcdc;
+/* Active/Selected Button */
+.button:pressed {
+    -fx-background-color: #4a2d82;
+    -fx-scale-y: 0.98;
+    -fx-translate-x: 2;
 }
 
+/* ========== CENTER CONTENT ========== */
+#centerNode {
+    -fx-background-color: transparent;
+}
+
+/* ========== COUNT SECTION STYLING ========== */
+#countSection {
+    -fx-background-color: rgba(248, 249, 250, 0.5);
+    -fx-background-radius: 20;
+    -fx-padding: 10;
+}
+
+/* Student Card Styling */
+/*#countSection Pane:nth-of-type(1) {*/
+/*    -fx-background-color: white;*/
+/*    -fx-background-radius: 20;*/
+/*    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 15, 0, 0, 2);*/
+/*    -fx-padding: 15;*/
+/*    -fx-border-color: #4e54c8;*/
+/*    -fx-border-width: 0 0 0 5;*/
+/*    -fx-border-radius: 20 0 0 20;*/
+/*}*/
+
+/*!* Course Card Styling *!*/
+/*#countSection Pane:nth-of-type(2) {*/
+/*    -fx-background-color: white;*/
+/*    -fx-background-radius: 20;*/
+/*    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 15, 0, 0, 2);*/
+/*    -fx-padding: 15;*/
+/*    -fx-border-color: #8e44ad;*/
+/*    -fx-border-width: 0 0 0 5;*/
+/*    -fx-border-radius: 20 0 0 20;*/
+/*}*/
+
+/* Registration Card Styling */
+/*#countSection Pane:nth-of-type(3) {*/
+/*    -fx-background-color: white;*/
+/*    -fx-background-radius: 20;*/
+/*    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 15, 0, 0, 2);*/
+/*    -fx-padding: 15;*/
+/*    -fx-border-color: #16a085;*/
+/*    -fx-border-width: 0 0 0 5;*/
+/*    -fx-border-radius: 20 0 0 20;*/
+/*}*/
+
+/* Hover Effects for Cards */
+#countSection Pane:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 20, 0, 0, 4);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-background-color: white;
+}
+
+/* Student Count Value */
+#lblStudentCount {
+    -fx-text-fill: #333333;
+    -fx-font-size: 32;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 0);
+}
+
+/* Course Count Value */
+#lblCourseCount {
+    -fx-text-fill: #333333;
+    -fx-font-size: 32;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 0);
+}
+
+/* Registration Count Value */
+#lblRegisterCount {
+    -fx-text-fill: #333333;
+    -fx-font-size: 32;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 0);
+}
+
+/* Card Title Styling */
+#countSection Text {
+    -fx-fill: #42275a;
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+}
+
+/* Card Icons */
+#countSection ImageView {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 0);
+    -fx-opacity: 0.8;
+}
+
+/* ========== DATE AND TIME PANES ========== */
+#datePane {
+    -fx-background-color: rgba(255, 255, 255, 0.92);
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 8, 0, 0, 1);
+    -fx-padding: 10;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: #6b419e;
+}
+
+#timePane {
+    -fx-background-color: rgba(255, 255, 255, 0.92);
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 8, 0, 0, 1);
+    -fx-padding: 10;
+    -fx-border-width: 0 0 3 0;
+    -fx-border-color: #6b419e;
+}
+
+#datePane:hover {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+#timePane:hover {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* ========== LABELS ========== */
+.label {
+    -fx-text-fill: #333333;
+    -fx-font-weight: normal;
+}
+
+#lblAdmin {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: #42275a;
+}
+
+#lblDate {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: #42275a;
+}
+
+#lblTime {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: #42275a;
+}
+
+/* ========== IMAGES ========== */
+ImageView {
+    -fx-opacity: 0.9;
+}
+
+/* ========== LOGOUT BUTTON ========== */
+#logoutBtn {
+    -fx-background-color: rgba(220, 53, 69, 0.7);
+}
+
+#logoutBtn:hover {
+    -fx-background-color: #dc3545;
+}

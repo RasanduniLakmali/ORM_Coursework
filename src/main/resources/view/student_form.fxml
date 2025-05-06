@@ -15,27 +15,6 @@
 
 <AnchorPane fx:id="studentPage" prefHeight="639.0" prefWidth="975.0" stylesheets="@../styles/student.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StudentFormController">
    <children>
-      <Text fx:id="studentHeading" layoutX="287.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGE STUDENTS">
-         <font>
-            <Font name="System Bold" size="36.0" />
-         </font>
-         <fill>
-            <LinearGradient endX="1.0" endY="0.42380952380952386" startX="0.5285714285714286" startY="0.48095238095238096">
-               <stops>
-                  <Stop>
-                     <color>
-                        <Color red="0.7968810796737671" green="0.5029239654541016" blue="0.8421052694320679" />
-                     </color>
-                  </Stop>
-                  <Stop offset="1.0">
-                     <color>
-                        <Color red="0.41960784792900085" green="0.2549019753932953" blue="0.6196078658103943" />
-                     </color>
-                  </Stop>
-               </stops>
-            </LinearGradient>
-         </fill>
-      </Text>
       <Pane fx:id="studentForm" layoutX="7.0" layoutY="86.0" prefHeight="526.0" prefWidth="251.0">
          <children>
             <TextField fx:id="txtStudentId" layoutX="33.0" layoutY="47.0" onKeyReleased="#txtStudentIdOnKeyReleased" prefHeight="25.0" prefWidth="155.0" promptText="Enter student id" />
@@ -90,8 +69,29 @@
             <TableColumn fx:id="colContact" prefWidth="114.00006103515625" text="Contact" />
         </columns>
       </TableView>
-      <TextField fx:id="txtSearchId" layoutX="277.0" layoutY="144.0" prefHeight="26.0" prefWidth="136.0" />
-      <Button fx:id="searchBtn" layoutX="462.0" layoutY="142.0" mnemonicParsing="false" onAction="#searchBtnOnAction" prefHeight="30.0" prefWidth="96.0" style="-fx-background-radius: 12;" text="Search" />
-      <Button fx:id="viewBtn" layoutX="745.0" layoutY="24.0" mnemonicParsing="false" onAction="#studentViewBtnOnAction" prefHeight="30.0" prefWidth="162.0" style="-fx-background-radius: 12;" text="View Registered Students" />
+      <TextField fx:id="txtSearchId" layoutX="277.0" layoutY="144.0" prefHeight="26.0" prefWidth="136.0" promptText="Enter student id" />
+      <Button fx:id="searchBtn" layoutX="462.0" layoutY="142.0" mnemonicParsing="false" onAction="#searchBtnOnAction" prefHeight="30.0" prefWidth="96.0" style="-fx-background-radius: 12;" text="  Search" />
+      <Button fx:id="viewBtn" layoutX="736.0" layoutY="24.0" mnemonicParsing="false" onAction="#studentViewBtnOnAction" prefHeight="32.0" prefWidth="196.0" style="-fx-background-radius: 12;" text="View Registered Students" textFill="#4c4242" />
+      <Text layoutX="345.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGE STUDENTS">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="0.42380952380952386" startX="0.5285714285714286" startY="0.48095238095238096">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7968810796737671" green="0.5029239654541016" blue="0.8421052694320679" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6165935397148132" green="0.47514620423316956" blue="0.7894737124443054" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
    </children>
 </AnchorPane>

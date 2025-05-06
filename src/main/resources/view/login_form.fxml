@@ -27,12 +27,12 @@
                   <Text fill="#f2ecec" layoutX="66.0" layoutY="471.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account ?" />
                   <Hyperlink fx:id="signUpHyperlink" layoutX="208.0" layoutY="454.0" onAction="#signUpHyperlinkOnAction" text="Sign up" />
                   <PasswordField fx:id="txtPassword" layoutX="44.0" layoutY="302.0" onKeyReleased="#txtPasswordOnKeyReleased" prefHeight="30.0" prefWidth="261.0" promptText="Enter Password" style="-fx-background-radius: 10;" />
-                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="271.0" layoutY="305.0" onMouseClicked="#passwordVisible">
+                  <TextField fx:id="txtPasswordVisible" layoutX="44.0" layoutY="302.0" prefHeight="30.0" prefWidth="261.0" style="-fx-background-radius: 10;" visible="false" />
+                  <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="272.0" layoutY="309.0" onMouseClicked="#passwordVisible">
                      <image>
                         <Image url="@../assets/images/pw_eyeIcon.png" />
                      </image>
                   </ImageView>
-                  <TextField fx:id="txtPasswordVisible" layoutX="44.0" layoutY="302.0" prefHeight="30.0" prefWidth="261.0" style="-fx-background-radius: 10;" visible="false" />
                </children>
             </AnchorPane>
          </children>
